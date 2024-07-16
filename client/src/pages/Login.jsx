@@ -21,7 +21,7 @@ const {setCurrentUser} = useContext(UserContext);
   const loginUser = async(e) =>{
     e.preventDefault();
     try {
-      const response = await axios.post('https://blog-application-h0j4.onrender.com/api/users/login',userData);
+      const response = await axios.post('https://blog-application-tqqt.onrender.com/api/users/login',userData);
       const user = await response.data;
       setCurrentUser(user);
       navigate('/') 

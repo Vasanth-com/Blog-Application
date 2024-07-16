@@ -11,7 +11,7 @@ const Posts = () => {
       const fetchPosts = async()=>{
         setIsLoading(true);
         try {
-          const response = await axios.get('https://blog-application-h0j4.onrender.com/api/posts')
+          const response = await axios.get('https://blog-application-tqqt.onrender.com/api/posts')
           setPost(response?.data)
         } catch (error) {
           console.log(error);

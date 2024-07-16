@@ -12,7 +12,7 @@ const Auther = () => {
     const getAuthors = async()=>{
       setIsLoading(true);
     try { 
-      const response = await axios.get(`https://blog-application-h0j4.onrender.com/api/users/`)
+      const response = await axios.get(`https://blog-application-tqqt.onrender.com/api/users/`)
       setAuthors(response.data);
     } catch (error) {
       console.log(error); 
@@ -34,7 +34,7 @@ const Auther = () => {
             authors.map(({_id:id,avatar,name,posts})=>{
               return <Link key={id} to={`/posts/users/${id}`} className='author'>
                 <div className="author__avatar">
-                  <img src={`https://blog-application-h0j4.onrender.com/uploads/${avatar}`} alt={`picAuth of ${name}`} />
+                  <img src={`https://blog-application-tqqt.onrender.com/uploads/${avatar}`} alt={`picAuth of ${name}`} />
                 </div>
                 <div className="author__info">
                   <h4>{name}</h4>

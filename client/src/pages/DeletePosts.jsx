@@ -23,7 +23,7 @@ useEffect(()=>{
 const removePost = async() =>{
   setIsLoading(true);
   try {
-    const response = await axios.delete(`https://blog-application-h0j4.onrender.com/api/posts/${id}`,{withCredentials:true,headers:{Authorization:`Bearer ${token}`}})
+    const response = await axios.delete(`https://blog-application-tqqt.onrender.com/api/posts/${id}`,{withCredentials:true,headers:{Authorization:`Bearer ${token}`}})
     if(response.status === 200){
       if(location.pathname === `/myposts/${currentUser.id}`){
         navigate(0)

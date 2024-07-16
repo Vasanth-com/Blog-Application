@@ -21,7 +21,7 @@ const Register = () => {
   const registerUser = async(e)=>{
       e.preventDefault();
       try {
-        const res = await axios.post('https://blog-application-h0j4.onrender.com/api/users/register',userData)
+        const res = await axios.post('https://blog-application-tqqt.onrender.com/api/users/register',userData)
         console.log(res);
         const newUser = await res.data
         console.log(newUser);

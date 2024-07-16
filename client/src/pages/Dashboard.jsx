@@ -24,7 +24,7 @@ const Dashboard = () => {
     const fetchPosts = async()=>{
       setIsLoading(true);
       try {
-        const response = await axios.get(`https://blog-application-h0j4.onrender.com/api/posts/users/${id}`,{withCredentials:true,headers:{Authorization: `Bearer ${token}`}})
+        const response = await axios.get(`https://blog-application-tqqt.onrender.com/api/posts/users/${id}`,{withCredentials:true,headers:{Authorization: `Bearer ${token}`}})
         setPosts(response.data)
       } catch (error) {
         console.log(error);
@@ -48,7 +48,7 @@ const Dashboard = () => {
             return <article key={post.id} className='dashboard__post'>
               <div className="dashboard__post-info">
                 <div className="dashboard__post-thumbnail">
-                  <img src={`https://blog-application-h0j4.onrender.com/uploads/${post.thumbnail}`} alt="" />
+                  <img src={`https://blog-application-tqqt.onrender.com/uploads/${post.thumbnail}`} alt="" />
                 </div>
                 <h5>{post.title}</h5>
               </div>

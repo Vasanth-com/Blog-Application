@@ -26,7 +26,7 @@ if(!token){
 
 useEffect(()=>{
   const getUser = async() =>{
-    const response = await axios.get(`https://blog-application-h0j4.onrender.com/api/users/${currentUser.id}`,{withCredentials:true,headers:{Authorization:`Bearer ${token}`}})
+    const response = await axios.get(`https://blog-application-tqqt.onrender.com/api/users/${currentUser.id}`,{withCredentials:true,headers:{Authorization:`Bearer ${token}`}})
     const {name,email,avatar} = response.data;
     setName(name);
     setEmail(email);
@@ -41,7 +41,7 @@ const changeAvatarHandler = async()=>{
   try {
     const postData = new FormData();
     postData.set('avatar',avatar)
-    const response = await axios.post(`https://blog-application-h0j4.onrender.com/api/users/change-avatar`,postData,{withCredentials:true,headers:{Authorization:`Bearer ${token}`}})
+    const response = await axios.post(`https://blog-application-tqqt.onrender.com/api/users/change-avatar`,postData,{withCredentials:true,headers:{Authorization:`Bearer ${token}`}})
     setAvatar(response?.data.avatar)
   } catch (error) {
     
@@ -59,7 +59,7 @@ const updateUserDetail = async(e)=>{
   userData.set('newPassword',newPassword);
   userData.set('confirmNewPassword',confirmNewPassword);
 
-  const response = await axios.patch(`https://blog-application-h0j4.onrender.com/api/users/edit-user`,userData,{withCredentials:true,headers:{Authorization:`Bearer ${token}`}});
+  const response = await axios.patch(`https://blog-application-tqqt.onrender.com/api/users/edit-user`,userData,{withCredentials:true,headers:{Authorization:`Bearer ${token}`}});
   if(response.status === 200){
     //log user out
     navigate('/logout')
@@ -80,7 +80,7 @@ const updateUserDetail = async(e)=>{
         <div className="profile__details">
           <div className="avatar__wrapper">
             <div className="profile__avatar">
-              <img src={`https://blog-application-h0j4.onrender.com/uploads/${avatar}`} alt="" />
+              <img src={`https://blog-application-tqqt.onrender.com/uploads/${avatar}`} alt="" />
             </div>
             {/* Form to update */}
             <form className="avatar__form">

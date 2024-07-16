@@ -22,7 +22,7 @@ const PostDetail = () => {
     const getPost = async()=>{
       setIsLoading(true);
       try {
-        const response = await axios.get(`https://blog-application-h0j4.onrender.com/api/posts/${id}`)
+        const response = await axios.get(`https://blog-application-tqqt.onrender.com/api/posts/${id}`)
         setPost(response.data)
       } catch (error) {
         setError(error)

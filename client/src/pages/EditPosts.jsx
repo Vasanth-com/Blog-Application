@@ -51,7 +51,7 @@ const POST_CATEGORIES = ["Agriculture","Business","Art","Education","Entertainme
 useEffect(()=>{
   const getPost = async()=>{
     try {
-      const response = await axios.get(`https://blog-application-h0j4.onrender.com/api/posts/${id}`);
+      const response = await axios.get(`https://blog-application-tqqt.onrender.com/api/posts/${id}`);
       setTitle(response.data.title);
       setDescription(response.data.description)
 
@@ -60,7 +60,7 @@ useEffect(()=>{
     } 
   } 
   getPost();
-})
+},[id])
 
 const editPost = async(e)=>{
   e.preventDefault();
@@ -71,7 +71,7 @@ const editPost = async(e)=>{
    postData.set('thumbnail',thumbnail);
    
    try {
-    const response = await axios.patch(`https://blog-application-h0j4.onrender.com/api/posts/${id}`,postData,{withCredentials:true,headers:{Authorization:`Bearer ${token}`}});
+    const response = await axios.patch(`https://blog-application-tqqt.onrender.com/api/posts/${id}`,postData,{withCredentials:true,headers:{Authorization:`Bearer ${token}`}});
     console.log(response.data);
     if(response.status === 200){
       return navigate('/')

@@ -54,7 +54,7 @@ const createPost = async(e)=>{
    postData.set('thumbnail',thumbnail);
    
    try {
-    const response = await axios.post('https://blog-application-h0j4.onrender.com/api/posts',postData,{withCredentials:true,headers:{Authorization:`Bearer ${token}`}});
+    const response = await axios.post('https://blog-application-tqqt.onrender.com/api/posts',postData,{withCredentials:true,headers:{Authorization:`Bearer ${token}`}});
     console.log(response.data);
     if(response.status === 201){
       return navigate('/')

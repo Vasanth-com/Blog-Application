@@ -8,7 +8,7 @@ const PostItem = ({postID,category,title,description="",authorID, thumbnail,crea
   return (
     <article className="post">
         <div className="post__thumbnail">
-            <img src={`https://blog-application-h0j4.onrender.com/uploads/${thumbnail}`} alt={title} />
+            <img src={`https://blog-application-tqqt.onrender.com/uploads/${thumbnail}`} alt={title} />
         </div>
         <div className="post__content">
             <Link to={`/posts/${postID}`}>

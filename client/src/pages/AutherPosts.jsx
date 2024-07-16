@@ -15,7 +15,7 @@ const AutherPosts = () => {
     const fetchPosts = async()=>{
       setIsLoading(true);
       try {
-        const response = await axios.get(`http://localhost:5000/api/posts/users/${id}`)
+        const response = await axios.get(`https://blog-application-tqqt.onrender.com/api/posts/users/${id}`)
         setPost(response?.data)
       } catch (error) {
         console.log(error);
