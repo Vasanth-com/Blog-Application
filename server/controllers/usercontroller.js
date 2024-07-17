@@ -104,7 +104,7 @@ const changeAvatar = async (req,res,next) =>{
         // delete old avatar if already exists
 
         if(user.avatar){
-            fs.unlink(path.join(__dirname,'..','uploads',user.avatar),(err)=>{
+            fs.unlink(path.join(__dirname,'..','/uploads',user.avatar),(err)=>{
                 if(err){
                     return next(new HttpError(err));    
                 }
@@ -121,7 +121,7 @@ const changeAvatar = async (req,res,next) =>{
          fileName = avatar.name;
          let splittedFileName = fileName.split('.');
          let newFileName = splittedFileName[0] + uuid() + '.' +splittedFileName[splittedFileName.length -1];
-         avatar.mv(path.join(__dirname, '..' , 'uploads',newFileName), async(err)=>{
+         avatar.mv(path.join(__dirname, '..' , '/uploads',newFileName), async(err)=>{
             if(err){
                 return next(new HttpError(err));
             }
